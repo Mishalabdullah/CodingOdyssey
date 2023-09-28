@@ -1,5 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import Pedometer from 'react-native-pedometer';
+
 
 export default function App() {
   return (
@@ -17,8 +19,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  /* text: {
-    color: '#FFF', // Set the text color using a hexadecimal color code
-    fontSize: 24,
-  },*/
 });
