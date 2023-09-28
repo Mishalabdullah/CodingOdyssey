@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import Pedometer from 'react-native-pedometer';
+import { Pedometer } from 'expo-sensors';
 
 
 export default function App() {
