@@ -56,11 +56,19 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text>Pedometer.isAvailableAsync(): {isPedometerAvailable}</Text>
-      <Text>The Permission value is {JSON.stringify(permissionCheck)}</Text>
-      <Text>Steps taken in the last 24 hours: {pastStepCount}</Text>
-      <Text>Walk! And watch this go up: {currentStepCount}</Text>
-      <Text>Step Counter Version 0.1</Text>
+      <Text style={{ color: "white" }}>
+        Pedometer.isAvailableAsync(): {isPedometerAvailable}
+      </Text>
+      <Text style={{ color: "white" }}>
+        The Permission value is {JSON.stringify(permissionCheck)}
+      </Text>
+      <Text style={{ color: "white" }}>
+        Steps taken in the last 24 hours: {pastStepCount}
+      </Text>
+      <Text style={{ color: "white" }}>
+        Walk! And watch this go up: {currentStepCount}
+      </Text>
+      <Text style={{ color: "white" }}>Step Counter Version 0.1</Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -69,7 +77,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#000",
+    color: "red",
     alignItems: "center",
     justifyContent: "center",
   },
