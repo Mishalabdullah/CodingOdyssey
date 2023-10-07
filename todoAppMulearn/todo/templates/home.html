@@ -8,7 +8,9 @@
   </p>
   {% else %}
   <p>
-    <a class="btn btn-primary btn-lg" href="" role="button">Sign In</a>
+    <a class="btn btn-primary btn-lg" href="{% url 'login' %}" role="button"
+      >Sign In</a
+    >
     <a class="btn btn-success btn-lg" href="{% url 'register' %}" role="button"
       >Register</a
     >
