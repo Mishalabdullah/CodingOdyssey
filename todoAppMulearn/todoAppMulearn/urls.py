@@ -21,5 +21,5 @@ urlpatterns = [
     # path("register/", include("register.urls")), 
     # path("login/", include("login.urls")), 
     path("members/",include("members.urls")),
-    path("",include("todo.urls"))
+    path("",include("home.urls"))
 ]
