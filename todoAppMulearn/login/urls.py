@@ -5,7 +5,7 @@ from .import views
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
-    path("",views.login,name="login"),
+    path("",views.login_user,name="login"),
     # path("register/", v.register, name="register"),
     # path('', include("todo.urls")),
     # path('', include("django.contrib.auth.urls")),
