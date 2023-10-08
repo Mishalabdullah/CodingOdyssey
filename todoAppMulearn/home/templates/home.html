@@ -1,0 +1,27 @@
+{% extends 'base.html' %} {% block content %}
+<div class="jumbotron">
+  <h1>Welcome to Muto App</h1>
+  <p>Your Personal Todo List Manager</p>
+  {% if user.is_authenticated %}
+  <p>
+    <a class="btn btn-primary btn-lg" href="{% url 'logout' %}" role="button"
+      >Logout</a
+    >
+  </p>
+  {% else %}
+  <p>
+    <a class="btn btn-primary btn-lg" href="{% url 'login' %}" role="button"
+      >Sign In</a
+    >
+    <a
+      class="btn btn-success btn-lg"
+      href="{% url 'register_user' %}"
+      role="button"
+      >Register</a
+    >
+  </p>
+  {% endif %} {% if user.is_authenticated %}
+  <p>Authenticated</p>
+  {% endif %}
+</div>
+{% endblock %}
