@@ -13,7 +13,7 @@ class Task(models.Model):
     complete = models.BooleanField(default=False)
     expired = models.BooleanField(default=False)
     created = models.DateTimeField(auto_now_add=True)
-    dueDate = models.DateTimeField(auto_now_add=False)
+    dueDate = models.DateField(null=True, blank=True)  
 
     objects = TaskManager()
 

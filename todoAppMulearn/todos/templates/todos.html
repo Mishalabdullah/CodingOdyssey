@@ -6,18 +6,15 @@
   <ul>
     {% for todo in incomplete_todos %}
     <li>
+        <a href="{%url 'delete_todo' todo.id %}">🗑️</a>
       {{ todo.title }}<a href="{% url 'todo_not_done' todo.id todo.complete %}">
         <input
           type="checkbox"
           class="todo-checkbox"
-          {%
-          if
-          todo.complete
-          %}checked{%
-          endif
-          %}
+          checked=false
         />
       </a>
+      <a href="{% url 'edit_todo' todo.id %}">🖉</a>
     </li>
     {% endfor %}
   </ul>
@@ -26,9 +23,11 @@
   <ul>
     {% for todo in completed_todos %}
     <li>
+        <a href="{%url 'delete_todo' todo.id %}"">🗑️</a>
       {{ todo.title }}<a href="{% url 'done_todo' todo.id todo.complete %}">
         <input type="checkbox" class="todo-checkbox" checked="todo.complete" />
       </a>
+      <a href="{% url 'edit_todo' todo.id %}">🖉</a>
     </li>
     {% endfor %}
   </ul>
@@ -36,7 +35,7 @@
   <h3>Expired Todos</h3>
   <ul>
     {% for todo in expired_todos %}
-    <li>{{ todo.title }}</li>
+    <li><a href="{%url 'delete_todo' todo.id %}"">🗑️</a>{{ todo.title }}<a href="{% url 'edit_todo' todo.id %}">🖉</a></li>
     {% endfor %}
   </ul>
 
