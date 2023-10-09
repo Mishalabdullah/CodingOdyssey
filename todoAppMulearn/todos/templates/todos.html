@@ -1,1 +1,25 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% block content %}
+<h1>Your Todos</h1>
+
+<ul>
+  <h3>Completed Todos</h3>
+  {% for todo in todos %}{% if todo.complete %}
+  <li>{{ todo.title }}</li>
+  {% endif %} {% endfor %}
+</ul>
+
+<ul>
+  <h3>Incompleted Todos</h3>
+  {% for todo in todos %} {% if not todo.complete and not todo.expired %}
+  <li>{{ todo.title }}</li>
+  {% endif %} {% endfor %}
+</ul>
+
+<ul>
+  <h3>Expired Todos</h3>
+  {% for todo in todos %} {% if todo.expired %}
+  <li>{{ todo.title }}</li>
+  {% endif %} {% endfor %}
+</ul>
+<a href="{% url 'add_todo' %}">Add New Todo</a>
+{% endblock %}
