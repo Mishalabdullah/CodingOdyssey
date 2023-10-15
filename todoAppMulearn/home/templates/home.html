@@ -7,6 +7,10 @@
     <a class="btn btn-primary btn-lg" href="{% url 'logout' %}" role="button"
       >Logout</a
     >
+
+    <a class="btn btn-success btn-lg" href="{% url 'todos' %}" role="button"
+      >View Todos</a
+    >
   </p>
   {% else %}
   <p>
@@ -20,8 +24,6 @@
       >Register</a
     >
   </p>
-  {% endif %} {% if user.is_authenticated %}
-  <p>Authenticated</p>
-  {% endif %}
+  {% endif %} {% if user.is_authenticated %} {% endif %}
 </div>
 {% endblock %}
