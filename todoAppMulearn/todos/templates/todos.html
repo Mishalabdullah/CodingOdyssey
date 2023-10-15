@@ -37,7 +37,6 @@
     <li><a href="{%url 'delete_todo' todo.id %}"">🗑️</a>{{ todo.title }}<a href="{% url 'edit_todo' todo.id %}">🖉</a></li>
     {% endfor %}
   </ul>
-
   <a href="{% url 'add_todo' %}">Add New Todo</a>
   {% endblock %}
 </ul>

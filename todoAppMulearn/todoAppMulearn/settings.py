@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'home',
     'members',
     'todos',
+    'api',
 ]
 
 MIDDLEWARE = [
@@ -54,6 +55,13 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'todoAppMulearn.urls'
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+    ),
+}
+
+
 
 TEMPLATES = [
     {
