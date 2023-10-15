@@ -2,7 +2,3 @@
 /members/__pycache__/
 /todos/__pycache__/
 /todoAppMulearn/__pycache__/
-.env
-__pycache__/
-*.pyc
-*.db
