@@ -4,6 +4,7 @@ from .forms import TaskForm
 from django.utils import timezone
 from datetime import datetime
 from django.shortcuts import redirect, get_object_or_404
+from django.views.decorators.csrf import csrf_exempt
 
 
 def todos(request):
@@ -30,6 +31,7 @@ def todos(request):
         'completed_todos': completed_todos,
         'expired_todos': expired_todos,
     })
+@csrf_exempt
 def add_todo(request):
     if request.method == 'POST':
         form = TaskForm(user=request.user, data=request.POST)
