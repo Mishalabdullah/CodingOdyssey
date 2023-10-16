@@ -5,6 +5,6 @@ from .serializers import TaskSerializer
 
 @api_view(['GET'])
 def api_home(request):
-    tasks = Task.objects.all()
+    tasks = Task.objects.filter(user=request.user)
     serializer = TaskSerializer(tasks, many=True)
     return Response(serializer.data)
