@@ -3,7 +3,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
 from .forms import RegisterUserForm
-
+from django.views.decorators.csrf import csrf_protect
 
 @csrf_protect
 def login_user(request):
