@@ -3,9 +3,8 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
 from .forms import RegisterUserForm
-from django.views.decorators.csrf import csrf_protect
-
-@csrf_protect
+from django.views.decorators.csrf import csrf_exempt
+@csrf_exempt 
 def login_user(request):
 	if request.method == "POST":
 		username = request.POST['username']
@@ -21,13 +20,13 @@ def login_user(request):
 
 	else:
 		return render(request, 'authenticate/login.html', {})
-@csrf_protect
+@csrf_exempt 
 def logout_user(request):
 	logout(request)
 	messages.success(request, ("You Were Logged Out!"))
 	return redirect('home')
 
-@csrf_protect
+@csrf_exempt 
 def register_user(request):
 	if request.method == "POST":
 		form = RegisterUserForm(request.POST)
