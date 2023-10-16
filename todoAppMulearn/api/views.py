@@ -43,3 +43,20 @@ def api_delete_todo(request, todo_id):
             return Response({'detail': 'You do not have permission to delete this todo.'}, status=status.HTTP_403_FORBIDDEN)
     except Task.DoesNotExist:
         return Response({'detail': 'Todo not found.'}, status=status.HTTP_404_NOT_FOUND)
+
+
+@api_view(['PATCH'])
+@permission_classes([IsAuthenticated])
+def api_toggle_task_state(request, task_id):
+    try:
+        task = Task.objects.get(id=task_id, user=request.user)
+    except Task.DoesNotExist:
+        return Response({"detail": "Task not found"}, status=404)
+
+    # Toggle the task's completion state
+    task.complete = not task.complete
+    task.save()
+
+    # Serialize and return the updated task
+    serializer = TaskSerializer(task)
+    return Response(serializer.data)
