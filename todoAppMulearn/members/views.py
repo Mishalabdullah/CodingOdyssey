@@ -4,6 +4,8 @@ from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
 from .forms import RegisterUserForm
 
+
+@csrf_protect
 def login_user(request):
 	if request.method == "POST":
 		username = request.POST['username']
@@ -19,13 +21,13 @@ def login_user(request):
 
 	else:
 		return render(request, 'authenticate/login.html', {})
-
+@csrf_protect
 def logout_user(request):
 	logout(request)
 	messages.success(request, ("You Were Logged Out!"))
 	return redirect('home')
 
-
+@csrf_protect
 def register_user(request):
 	if request.method == "POST":
 		form = RegisterUserForm(request.POST)
