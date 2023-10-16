@@ -1,42 +1,50 @@
 {% extends 'base.html' %} {% block content %}
-<h1>Your Todos</h1>
+<div class="container">
+  <h1>Your Todos</h1>
 
-<ul>
-  <h3>Incompleted Todos</h3>
-  <ul>
-    {% for todo in incomplete_todos %}
-    <li>
-        <a href="{%url 'delete_todo' todo.id %}">🗑️</a>
-      {{ todo.title }}<a href="{% url 'todo_not_done' todo.id todo.complete %}">
-        <input
-          type="checkbox"
-          class="todo-checkbox"
-        />
-      </a>
-      <a href="{% url 'edit_todo' todo.id %}">🖉</a>
-    </li>
-    {% endfor %}
-  </ul>
+  <ul class="list-group">
+    <h3 class="mt-4">Incompleted Todos</h3>
+    <ul class="list-group list-group-flush">
+      {% for todo in incomplete_todos %}
+      <li class="list-group-item">
+        <a class="text-danger" href="{% url 'delete_todo' todo.id %}">🗑️</a>
+        {{ todo.title }}
+        <a href="{% url 'todo_not_done' todo.id todo.complete %}">
+          <input type="checkbox" class="todo-checkbox" />
+        </a>
+        <!-- <a href="{% url 'edit_todo' todo.id %}">🖉</a> -->
+      </li>
+      {% endfor %}
+    </ul>
 
-  <h3>Completed Todos</h3>
-  <ul>
-    {% for todo in completed_todos %}
-    <li>
-        <a href="{%url 'delete_todo' todo.id %}"">🗑️</a>
-      {{ todo.title }}<a href="{% url 'done_todo' todo.id todo.complete %}">
-        <input type="checkbox" class="todo-checkbox" checked="todo.complete" />
-      </a>
-      <a href="{% url 'edit_todo' todo.id %}">🖉</a>
-    </li>
-    {% endfor %}
-  </ul>
+    <h3 class="mt-4">Completed Todos</h3>
+    <ul class="list-group list-group-flush">
+      {% for todo in completed_todos %}
+      <li class="list-group-item">
+        <a class="text-danger" href="{% url 'delete_todo' todo.id %}">🗑️</a>
+        {{ todo.title }}
+        <a href="{% url 'done_todo' todo.id todo.complete %}">
+          <input
+            type="checkbox"
+            class="todo-checkbox"
+            checked="{{ todo.complete }}"
+          />
+        </a>
+        <!-- <a href="{% url 'edit_todo' todo.id %}">🖉</a> -->
+      </li>
+      {% endfor %}
+    </ul>
 
-  <h3>Expired Todos</h3>
-  <ul>
-    {% for todo in expired_todos %}
-    <li><a href="{%url 'delete_todo' todo.id %}"">🗑️</a>{{ todo.title }}<a href="{% url 'edit_todo' todo.id %}">🖉</a></li>
-    {% endfor %}
+    <h3 class="mt-4">Expired Todos</h3>
+    <ul class="list-group list-group-flush">
+      {% for todo in expired_todos %}
+      <li class="list-group-item">
+        <a class="text-danger" href="{% url 'delete_todo' todo.id %}">🗑️</a>
+        {{ todo.title }}
+      </li>
+      {% endfor %}
+    </ul>
   </ul>
-  <a href="{% url 'add_todo' %}">Add New Todo</a>
-  {% endblock %}
-</ul>
+  <a class="btn btn-primary mt-4" href="{% url 'add_todo' %}">Add New Todo</a>
+</div>
+{% endblock %}
