@@ -90,16 +90,8 @@ To run the application, execute `python manage.py runserver` and access the app 
 
 The application's user interface is designed using Bootstrap, providing a clean and user-friendly design.
 
-## Troubleshooting
-
-If you encounter issues or errors, please refer to the Troubleshooting section of this documentation.
-
-## Contributing
-
-We welcome contributions to improve the Django Todo App. Feel free to fork the repository and submit pull requests.
-
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the GPL License - see the [LICENSE](../LICENSE) file for details.
 
 Please remember that this is a basic template, and you should add more specific details and instructions based on your actual application.
