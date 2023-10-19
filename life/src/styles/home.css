@@ -1,0 +1,48 @@
+body {
+  font-family: "Roboto", sans-serif; /* Use Google's Roboto font for the material design look */
+  background-color: #2196f3; /* Primary background color, blue in this example */
+  color: #fff; /* Text color, white in this example */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 2rem; /* Heading size */
+}
+
+button {
+  background-color: #1976d2; /* Darker blue for buttons */
+  color: #fff; /* Text color, white in this example */
+  border: none;
+  padding: 15px 30px; /* Increase button size */
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #0d47a1; /* Deeper blue on hover */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Add box shadow on hover */
+}
+
+/* Increase the styles for the :active state (when the button is clicked) */
+button:active {
+  background-color: #0a3566;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Increase the styles for the :focus state (when the button is selected) */
+button:focus {
+  outline: none;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Add a subtle hover effect to the h1 element */
+h1:hover {
+  color: #e1f5fe; /* Light blue on h1 hover */
+}
