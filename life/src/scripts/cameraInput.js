@@ -1,23 +1,5 @@
-function toggleUI() {
-  const video = document.getElementById("video");
-  const canvas = document.getElementById("canvas");
-  const captureButton = document.getElementById("captureButton");
-  const takePictureButton = document.getElementById("takePictureButton");
-
-  if (video.style.display === "block") {
-    video.style.display = "none";
-    canvas.style.display = "block";
-    captureButton.style.display = "block";
-    takePictureButton.style.display = "none";
-  } else {
-    video.style.display = "block";
-    canvas.style.display = "none";
-    captureButton.style.display = "none";
-    takePictureButton.style.display = "block";
-  }
-}
-
 function takePicture() {
+  let videoStream = null;
   const video = document.getElementById("video");
   const canvas = document.getElementById("canvas");
   const captureButton = document.getElementById("captureButton");
@@ -28,17 +10,26 @@ function takePicture() {
     .getUserMedia({ video: true })
     .then(function (stream) {
       video.srcObject = stream;
+      videoStream = stream;
+      takePictureButton.style.display = "none";
+      captureButton.style.display = "inline";
     })
     .catch(function (error) {
       console.error("Error accessing webcam:", error);
     });
 
-  // When the "Take Picture" button is clicked, capture a snapshot
+  // When the "Click to Save" button is clicked, capture a snapshot and stop streaming
   captureButton.addEventListener("click", function () {
+    // Draw the snapshot onto the canvas
+    canvas.style.display = "flex";
+    canvas.style.flexDirection = "column";
     const context = canvas.getContext("2d");
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;
     context.drawImage(video, 0, 0, canvas.width, canvas.height);
-    toggleUI(); // Toggle the visibility of elements
+    video.style.display = "none";
+    videoStream.getTracks().forEach((track) => track.stop());
+    // Convert the image data to a base64-encoded string and log it to the console
+    const base64Image = canvas.toDataURL("image/png");
   });
 }

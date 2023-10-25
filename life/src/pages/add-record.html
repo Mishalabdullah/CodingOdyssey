@@ -14,11 +14,27 @@
         <div class="text-4xl font-bold">Admission Form</div>
       </div>
       <div class="m-2 flex-col justify-center items-center">
-        <div class="flex h-96 max-w-fit justify-center">
-          <video class="flex-col justify-center" id="video" autoplay></video>
+        <div class="flex justify-center">
+          <video
+            class="flex-col h-96 max-w-fit justify-center"
+            id="video"
+            autoplay
+          ></video>
         </div>
-        <canvas id="canvas"></canvas>
-        <button id="captureButton">Click To Save</button>
+        <div class="m-2 flex-col justify-center items-center">
+          <canvas
+            class="hidden h-96 max-w-fit justify-center"
+            id="canvas"
+          ></canvas>
+        </div>
+        <button
+          id="captureButton"
+          onclick="takePicture()"
+          type="button"
+          class="text-white hidden bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+        >
+          Click To Save
+        </button>
         <button
           id="takePictureButton"
           onclick="takePicture()"
