@@ -3,15 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="../styles/output.css" rel="stylesheet" />
+    <script src="../scripts/cameraInput.js"></script>
+
     <title>Document</title>
   </head>
   <body>
-    <div>
+    <div class="flex-col text-center m-2 p-2 justify-center">
       <div>
-        <h1>Admission Form</h1>
+        <div class="text-4xl font-bold">Admission Form</div>
       </div>
-      <div></div>
+      <div class="m-2 flex-col justify-center items-center">
+        <div class="flex h-96 max-w-fit justify-center">
+          <video class="flex-col justify-center" id="video" autoplay></video>
+        </div>
+        <canvas id="canvas"></canvas>
+        <button id="captureButton">Click To Save</button>
+        <button
+          id="takePictureButton"
+          onclick="takePicture()"
+          type="button"
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+        >
+          Take Picture
+        </button>
+      </div>
       <a href="index.html">
         <button>HOME</button>
       </a>
