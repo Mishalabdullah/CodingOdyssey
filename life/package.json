@@ -11,5 +11,8 @@
   },
   "scripts": {
     "start": "electron ."
+  },
+  "dependencies": {
+    "sqlite3": "^5.1.6"
   }
 }

@@ -31,5 +31,6 @@ function takePicture() {
     videoStream.getTracks().forEach((track) => track.stop());
     // Convert the image data to a base64-encoded string and log it to the console
     const base64Image = canvas.toDataURL("image/png");
+    console.log(base64Image);
   });
 }
