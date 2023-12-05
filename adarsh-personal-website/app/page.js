@@ -10,11 +10,20 @@ export default function Home() {
           with empathetic design. I'm seeking fresh design opportunities and
           open to both internships and freelance projects.
         </div>
-        <PageComponent pageName="Works" pageLink="/about-me" />
-        <PageComponent pageName="About Me" pageLink="/about-me" />
-        <div className="flex ">
-          <PageComponent pageName="Contact" pageLink="/about-me" />
-          <PageComponent pageName="Resume" pageLink="/about-me" />
+        <div className="md:flex">
+          <div className="inline md:flex justify-stretch md:w-6/12">
+            <div className="md:w-6/12">
+              <PageComponent pageName="Works" pageLink="/works" />
+            </div>
+            <div className="md:w-6/12">
+              <PageComponent pageName="About Me" pageLink="/about-me" />
+            </div>
+          </div>
+          <div className="flex md:flex-col md:w-6/12">
+            <PageComponent pageName="Contact" pageLink="/contact" />
+            <div className="md:m-2"></div>
+            <PageComponent pageName="Resume" pageLink="/resume" />
+          </div>
         </div>
       </div>
     </main>
