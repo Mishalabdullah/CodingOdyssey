@@ -3,13 +3,19 @@ import PageComponent from "./components/pagecard";
 export default function Home() {
   return (
     <main>
-      <div className="flex justify-center h-screen relative">
-        <div className="z-10 text-8xl text-[#343437] self-center relative">
-          Adarsh
+      <div className="text-[#F5F5F7] text-2xl  h-screen relative">
+        <div className="m-2 p-2">
+          Hi,<br></br>
+          I'm Adarsh, a UX designer based in India. I solve real-world problems
+          with empathetic design. I'm seeking fresh design opportunities and
+          open to both internships and freelance projects.
         </div>
-      </div>
-      <div className="z-20 relative">
+        <PageComponent pageName="Works" pageLink="/about-me" />
         <PageComponent pageName="About Me" pageLink="/about-me" />
+        <div className="flex ">
+          <PageComponent pageName="Contact" pageLink="/about-me" />
+          <PageComponent pageName="Resume" pageLink="/about-me" />
+        </div>
       </div>
     </main>
   );
