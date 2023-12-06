@@ -1,5 +1,4 @@
-import Image from "next/image";
-
+// import Image from "next/image";
 import PageComponent from "./components/pagecard";
 export default function Home() {
   return (
