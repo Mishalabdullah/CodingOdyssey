@@ -1,15 +1,9 @@
 import Image from "next/image";
-import { Inter } from "next/font/google";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
 
 import PageComponent from "./components/pagecard";
 export default function Home() {
   return (
-    <main className={`${inter.variable} font-sans`}>
+    <main>
       <div className="text-[#F5F5F7] text-2xl md:text-5xl font-bold  h-screen relative">
         <div className="m-2 p-2">
           Hi,<br></br>
