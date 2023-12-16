@@ -9,6 +9,7 @@ export default function Works() {
       </div>
       <div>
         <WorkCard
+          imageURL={`${process.env.PUBLIC_URL}/hack.png`}
           heading="Scheduler Pro"
           subHeading="AI based scheduling app."
           description="Scheduler Pro Al scheduling app that allows users to create and manage schedules based on selected dates and times. The app should provide timely reminders through
@@ -16,18 +17,21 @@ notifications to ensure users never miss an event or task. This app was designed
           linkText="View Behance"
         />
         <WorkCard
+          imageURL={`${process.env.PUBLIC_URL}/hack.png`}
           heading="Reakt"
           subHeading="Realtime emergency mediator app."
           description="Reakt, the real-time emergency mediator app, revolutionizes the reporting process during dangerous situations. With a simple tap, citizens can automatically transmit live information to the nearest police station or officials, fostering seamless interaction and ensuring a swift emergency response. This app was designed for a 24 hour design hackathon."
           linkText="View Behance"
         />
         <WorkCard
+          imageURL={`${process.env.PUBLIC_URL}/website.png`}
           heading="Indian Society for Technical Education"
           subHeading="Revamping the website of Indian Society for Technical Education"
           description="Indian Society for Technical Education, Government Engineering College Thrissur students chapter is actively involved in conducting technical events, talks, workshops, and competitions to promote innovation among young minds. The chapter has over 2000 students and 300+ faculty members."
           linkText="View Behance"
         />
         <WorkCard
+          imageURL={`${process.env.PUBLIC_URL}/diverse.png`}
           heading="Miscellaneous projects"
           subHeading="A Collection of miscellaneous projects"
           description="These projects serve as my practice and experiments in user interface design and are presented without any specific categorization or order. Throughout these projects, I focused on designing components, login page flows, home pages, and various UI elements."
