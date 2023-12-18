@@ -5,7 +5,7 @@ const PageComponent = ({ pageName, pageLink }) => {
     <div className="md:h-full font-inter">
       <a href={pageLink}>
         <div
-          className="bg-[#2525258C] md:hover:bg-[#8FDF92]  inline-block align-bottom  text[#9C9C9C] bg-opacity-40 relative rounded-[52px] m-2 h-48 md:h-full md:w-11/12  p-10"
+          className="bg-[#2525258C] md:hover:bg-[#8FDF92]  inline-block align-bottom  text[#9C9C9C] bg-opacity-40 relative rounded-[52px] text-2xl m-2 h-48 md:h-full md:w-11/12  p-10"
           style={{
             flexGrow: 1,
             display: "flex",

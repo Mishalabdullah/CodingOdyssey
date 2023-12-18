@@ -3,7 +3,7 @@ import PageComponent from "./components/pagecard";
 export default function Home() {
   return (
     <main>
-      <div className="text-[#F5F5F7] overflow-hidden text-2xl md:text-5xl font-bold  h-screen relative">
+      <div className="text-[#F5F5F7] overflow-hidden text-2xl md:text-5xl h-screen relative">
         <div className="m-2  p-2">
           Hi,<br></br>
           I'm Adarsh, a UX designer based in India. I solve real-world problems
@@ -11,7 +11,7 @@ export default function Home() {
           open to both internships and freelance projects.
         </div>
         <div className="md:flex md:h-96  md:mt-16 md:m-2 md:p-2">
-          <div className="inline md:flex justify-stretch md:w-6/12">
+          <div className="inline md:flex md:w-8/12">
             <div className="md:w-6/12 ">
               <PageComponent pageName="Works" pageLink="/works" />
             </div>
@@ -19,7 +19,7 @@ export default function Home() {
               <PageComponent pageName="About Me" pageLink="/about-me" />
             </div>
           </div>
-          <div className="flex md:flex-col justify-around  md:w-6/12">
+          <div className="flex md:flex-col justify-around  md:w-4/12">
             <PageComponent pageName="Contact" pageLink="/contact" />
             <div className="md:m-2"></div>
             <PageComponent pageName="Resume" pageLink="/resume" />
