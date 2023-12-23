@@ -1,15 +1,17 @@
 import HeadingField from "../components/headingField";
 import DataComponent from "../components/datacard";
+import ContactComponent from "../components/contactcard";
+
 // import PageComponent from "../components/pagecard";
 // import Link from "next/link";
 export default function About() {
   return (
-    <div className="p-2 m-2 font-bold text-3xl text-[#F5F5F7]">
+    <div className="p-2 m-2 font-bold text-xl text-[#F5F5F7]">
       <p>About me</p>
       <br />
       <br />
       <div>
-        <p className="text-5xl">
+        <p className="text-2xl">
           I'm a UX designer based in Kerala, India, pursuing a degree in
           Computer Science and Engineering at Government Engineering College
           Thrissur, graduating in 2025. Although my journey began in frontend
@@ -20,14 +22,14 @@ export default function About() {
         </p>
       </div>
       <div>
-        <div className="mt-10 text-2xl">
+        <div className="mt-10 text-base">
           <p className="text-[#86868B]">Find More On</p>
           <p>LinkedIn</p>
         </div>
         <div>
           <HeadingField heading="Experience" />
-          <div className="">
-            <DataComponent
+          <div>
+            <ContactComponent
               dataName="UX Designer"
               dataLink="#"
               dataText="Indian Society for Technical Education
@@ -35,14 +37,14 @@ export default function About() {
               dateStart="Aug 2023 "
               dateEnd="- Present"
             />
-            <DataComponent
+            <ContactComponent
               dataName=" UI Designer Intern"
               dataLink="#"
               dataText="GTech MuLearn"
               dateStart="Jun 2023 "
               dateEnd="- Present"
             />
-            <DataComponent
+            <ContactComponent
               dataName="Co Founder, UX Designer"
               dataLink="#"
               dataText="Schematic Bytes"

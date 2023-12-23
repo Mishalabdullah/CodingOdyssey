@@ -1,20 +1,32 @@
 import HeadingField from "../components/headingField";
-import DataComponent from "../components/datacard";
-import { Darker_Grotesque } from "next/font/google";
+import ContactComponent from "../components/contactcard";
 export default function Contact() {
   return (
-    <div className="m-2 p-2 font-bold text-3xl text-[#F5F5F7]">
+    <div className="m-2 p-2 font-bold text-xl text-[#F5F5F7]">
       <div>
         <HeadingField heading="Contact" />
       </div>
       <div>
         <br></br>
-        <p>Feel free to say Hi !</p>
+        <p className="text-base">Feel free to say Hi !</p>
       </div>
-      <div>
-        <DataComponent dataName="Gmail" />
-        <DataComponent dataName="LinkedIn" />
-        <DataComponent dataName="Behance" />
+      <div className="text-base">
+        <ContactComponent
+          dataImage={`${process.env.PUBLIC_URL}/arrow.png`}
+          dataName="Gmail"
+        />
+        <ContactComponent
+          dataImage={`${process.env.PUBLIC_URL}/arrow.png`}
+          dataName="LinkedIn"
+        />
+        <ContactComponent
+          dataImage={`${process.env.PUBLIC_URL}/arrow.png`}
+          dataName="Behance"
+        />
+        <ContactComponent
+          dataImage={`${process.env.PUBLIC_URL}/arrow.png`}
+          dataName="Dribble"
+        />
       </div>
     </div>
   );

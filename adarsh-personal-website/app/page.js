@@ -3,8 +3,8 @@ import PageComponent from "./components/pagecard";
 export default function Home() {
   return (
     <main>
-      <div className="text-[#F5F5F7] overflow-hidden text-2xl md:text-5xl h-screen relative">
-        <div className="m-2  p-2">
+      <div className="text-[#F5F5F7]  text-2xl md:text-5xl h-screen relative">
+        <div className="m-4  p-2">
           Hi,<br></br>
           I'm Adarsh, a UX designer based in India. I solve real-world problems
           with empathetic design. I'm seeking fresh design opportunities and
@@ -21,10 +21,22 @@ export default function Home() {
           </div>
           <div className="flex md:flex-col justify-around  md:w-4/12">
             <PageComponent pageName="Contact" pageLink="/contact" />
-            <div className="md:m-2"></div>
+            <div className="md:m-2 "></div>
             <PageComponent pageName="Resume" pageLink="/resume" />
           </div>
         </div>
+        {/* <div className="grid gap-2 grid-cols-1 md:grid-cols-3">
+          <div className="">
+            <PageComponent pageName="Works" pageLink="/works" />
+          </div>
+          <div>
+            <PageComponent pageName="Works" pageLink="/works" />
+          </div>
+          <div className="">
+            <PageComponent pageName="Works" pageLink="/works" />
+            <PageComponent pageName="Works" pageLink="/works" />
+          </div>
+        </div> */}
       </div>
     </main>
   );
