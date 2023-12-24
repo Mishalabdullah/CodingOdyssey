@@ -1,12 +1,13 @@
 import HeadingField from "../components/headingField";
 import DataComponent from "../components/datacard";
 import ContactComponent from "../components/contactcard";
-
+import MobileNabar from "../components/mobileNavbar";
 // import PageComponent from "../components/pagecard";
 // import Link from "next/link";
 export default function About() {
   return (
     <div className="p-2 m-2 font-bold text-xl text-[#F5F5F7]">
+      <MobileNabar />
       <p>About me</p>
       <br />
       <br />

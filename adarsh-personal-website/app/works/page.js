@@ -1,4 +1,5 @@
 import HeadingField from "../components/headingField";
+import MobileNabar from "../components/mobileNavbar";
 import WorkCard from "../components/workCard";
 import DataComponent from "../components/datacard";
 export default function Works() {
@@ -6,6 +7,7 @@ export default function Works() {
     <div className="m-2 p-2 font-bold text-3xl text-[#F5F5F7]">
       <div className="font-bold text-[#F5F5F7]">
         <HeadingField heading="Selected Works" />
+        <MobileNabar />
       </div>
       <div>
         <WorkCard

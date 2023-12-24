@@ -1,10 +1,12 @@
 import HeadingField from "../components/headingField";
 import ContactComponent from "../components/contactcard";
+import MobileNabar from "../components/mobileNavbar";
 export default function Contact() {
   return (
     <div className="m-2 p-2 font-bold text-xl text-[#F5F5F7]">
       <div>
         <HeadingField heading="Contact" />
+        <MobileNabar />
       </div>
       <div>
         <br></br>
