@@ -12,30 +12,35 @@ export default function Home() {
         </div>
         <div className="md:flex md:h-96  md:mt-16 md:m-2 md:p-2">
           <div className="inline md:flex md:w-8/12">
-            <div className="md:w-6/12 ">
-              <PageComponent pageName="Works" pageLink="/works" />
+            <div className="md:w-6/12 md:grow md:h-28rem">
+              <PageComponent
+                pageName="Works"
+                pageLink="/works"
+                onHoverText="Tap to see my selected works!"
+              />
             </div>
-            <div className="md:w-6/12">
-              <PageComponent pageName="About Me" pageLink="/about-me" />
+            <div className="md:w-6/12 md:grow md:h-28rem">
+              <PageComponent
+                pageName="About Me"
+                pageLink="/about-me"
+                onHoverText="Curious about my design journey?"
+              />
             </div>
           </div>
-          <div className="flex md:flex-col justify-evenly md:w-4/12">
-            <PageComponent pageName="Contact" pageLink="/contact" />
-            <PageComponent pageName="Resume" pageLink="/resume" />
+          <div className="flex md:grow md:flex-col md:h-28rem justify-evenly md:w-4/12">
+            <PageComponent
+              pageName="Contact"
+              pageLink="/contact"
+              onHoverText="let's collaborate!"
+            />
+            <div className="md:m-2 "></div>
+            <PageComponent
+              pageName="Resume"
+              pageLink="/resume"
+              onHoverText="Go to read.cv"
+            />
           </div>
         </div>
-        {/* <div className="grid gap-2 grid-cols-1 md:grid-cols-3">
-          <div className="">
-            <PageComponent pageName="Works" pageLink="/works" />
-          </div>
-          <div>
-            <PageComponent pageName="Works" pageLink="/works" />
-          </div>
-          <div className="">
-            <PageComponent pageName="Works" pageLink="/works" />
-            <PageComponent pageName="Works" pageLink="/works" />
-          </div>
-        </div> */}
       </div>
     </main>
   );

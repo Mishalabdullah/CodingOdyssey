@@ -1,4 +1,5 @@
 import HeadingField from "../components/headingField";
+import Navbar from "../components/navbar";
 import DataComponent from "../components/datacard";
 import ContactComponent from "../components/contactcard";
 import MobileNabar from "../components/mobileNavbar";
@@ -8,6 +9,7 @@ export default function About() {
   return (
     <div className="p-2 m-2 font-bold text-xl text-[#F5F5F7]">
       <MobileNabar />
+      <Navbar />
       <p>About me</p>
       <br />
       <br />

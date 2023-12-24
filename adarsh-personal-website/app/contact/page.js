@@ -1,5 +1,6 @@
 import HeadingField from "../components/headingField";
 import ContactComponent from "../components/contactcard";
+import Navbar from "../components/navbar";
 import MobileNabar from "../components/mobileNavbar";
 export default function Contact() {
   return (
@@ -7,6 +8,7 @@ export default function Contact() {
       <div>
         <HeadingField heading="Contact" />
         <MobileNabar />
+        <Navbar />
       </div>
       <div>
         <br></br>

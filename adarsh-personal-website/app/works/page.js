@@ -2,6 +2,7 @@ import HeadingField from "../components/headingField";
 import MobileNabar from "../components/mobileNavbar";
 import WorkCard from "../components/workCard";
 import DataComponent from "../components/datacard";
+import Navbar from "../components/navbar";
 export default function Works() {
   return (
     <div className="m-2 p-2 font-bold text-3xl text-[#F5F5F7]">
@@ -10,6 +11,7 @@ export default function Works() {
         <MobileNabar />
       </div>
       <div>
+        <Navbar />
         <WorkCard
           imageURL={`${process.env.PUBLIC_URL}/hack.png`}
           heading="Scheduler Pro"
