@@ -19,9 +19,8 @@ export default function Home() {
               <PageComponent pageName="About Me" pageLink="/about-me" />
             </div>
           </div>
-          <div className="flex md:flex-col justify-evenly  md:w-4/12">
+          <div className="flex md:flex-col justify-evenly md:w-4/12">
             <PageComponent pageName="Contact" pageLink="/contact" />
-            <div className="md:m-2 "></div>
             <PageComponent pageName="Resume" pageLink="/resume" />
           </div>
         </div>
